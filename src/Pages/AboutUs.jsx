@@ -1,3 +1,5 @@
+import CustomerCommentsSection from "../components/CustomerComments";
+
 function AboutUs() {
   return (
     <main>
@@ -69,82 +71,8 @@ function AboutUs() {
         </div>
       </section>
 
-      <section className="py-5">
-        <div>
-          <h2 className="text-center text-2xl font-bold text-[#8c5b34] mb-10">
-            Customer comments
-          </h2>
-          <div className="flex justify-center space-x-4">
-            {/* First Comment */}
-            <div className="w-full md:w-1/2 lg:w-1/3 mb-4">
-              <div className="bg-white p-4 shadow-sm rounded-lg border border-[#ddd]">
-                <div className="flex justify-between items-center">
-                  <div className="flex items-center">
-                    <img
-                      src="../src/images/revieu.png"
-                      alt="User"
-                      className="w-10 h-10 rounded-full mr-2"
-                    />
-                    <span className="font-bold">Rubina Alfa</span>
-                  </div>
-                  <div>
-                    <span className="bg-light py-1 px-3 text-sm text-gray-700">
-                      <i className="bi bi-calendar"></i> 12 Oct 2024
-                    </span>
-                  </div>
-                </div>
-                <p className="mt-3 text-base text-gray-600">
-                  I had a wonderful experience at this salon! The staff was very
-                  friendly, and the service was excellent. I highly recommend it
-                  to anyone looking for a professional and relaxing beauty
-                  treatment.
-                </p>
-                <div className="flex justify-between items-center mt-3">
-                  <a href="#" className="text-red-500 text-sm">
-                    Read More
-                  </a>
-                  <div className="text-[#8c5b34] text-xl">★★★☆☆</div>
-                  <i className="bi bi-heart text-[#8c5b34] text-xl cursor-pointer"></i>
-                </div>
-              </div>
-            </div>
-
-            {/* Second Comment */}
-            <div className="w-full md:w-1/2 lg:w-1/3 mb-4">
-              <div className="bg-white p-4 shadow-sm rounded-lg border border-[#ddd]">
-                <div className="flex justify-between items-center">
-                  <div className="flex items-center">
-                    <img
-                      src="https://i.pinimg.com/236x/45/4b/f5/454bf5721357bb898d3a455d89d8035f.jpg"
-                      alt="User"
-                      className="w-10 h-10 rounded-full mr-2"
-                    />
-                    <span className="font-bold">Malak Khalid</span>
-                  </div>
-                  <div>
-                    <span className="bg-light py-1 px-3 text-sm text-gray-700">
-                      <i className="bi bi-calendar"></i> 1 Oct 2024
-                    </span>
-                  </div>
-                </div>
-                <p className="mt-3 text-base text-gray-600">
-                  I had a wonderful experience at this salon! The staff was
-                  friendly, and the service was excellent. The ambiance was
-                  relaxing, and I loved the high-quality products they used. I
-                  left feeling pampered.
-                </p>
-                <div className="flex justify-between items-center mt-3">
-                  <a href="#" className="text-red-500 text-sm">
-                    Read More
-                  </a>
-                  <div className="text-[#8c5b34] text-xl">★★★☆☆</div>
-                  <i className="bi bi-heart text-[#8c5b34] text-xl cursor-pointer"></i>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+      <CustomerCommentsSection />
+      
     </main>
   );
 }

@@ -23,28 +23,28 @@ function ContactUs () {
                     <input
                       type="text"
                       placeholder="Name"
-                      className="w-full px-4 py-3 border-b border-black focus:border-[#e27d6d] focus:outline-none transition-colors duration-300 bg-transparent focus:text-[#e27d6d] placeholder-black focus:placeholder-[#e27d6d]"
+                      className="w-full px-4 py-3 border-b border-black focus:border-[#B58152] focus:outline-none transition-colors duration-300 bg-transparent focus:text-[#B58152] placeholder-black focus:placeholder-[#B58152]"
                     />
                   </div>
                   <div>
                     <input
                       type="email"
                       placeholder="Email"
-                      className="w-full px-4 py-3 border-b border-black focus:border-[#e27d6d] focus:outline-none transition-colors duration-300 bg-transparent focus:text-[#e27d6d] placeholder-black focus:placeholder-[#e27d6d]"
+                      className="w-full px-4 py-3 border-b border-black focus:border-[#B58152] focus:outline-none transition-colors duration-300 bg-transparent focus:text-[#B58152] placeholder-black focus:placeholder-[#B58152]"
                     />
                   </div>
                   <div>
                     <input
                       type="text"
                       placeholder="Number"
-                      className="w-full px-4 py-3 border-b border-black focus:border-[#e27d6d] focus:outline-none transition-colors duration-300 bg-transparent focus:text-[#e27d6d] placeholder-black focus:placeholder-[#e27d6d]"
+                      className="w-full px-4 py-3 border-b border-black focus:border-[#B58152] focus:outline-none transition-colors duration-300 bg-transparent focus:text-[#B58152] placeholder-black focus:placeholder-[#B58152]"
                     />
                   </div>
                   <div>
                     <input
                       type="text"
                       placeholder="Message"
-                      className="w-full px-4 py-3 border-b border-black focus:border-[#e27d6d] focus:outline-none transition-colors duration-300 bg-transparent focus:text-[#e27d6d] placeholder-black focus:placeholder-[#e27d6d]"
+                      className="w-full px-4 py-3 border-b border-black focus:border-[#B58152] focus:outline-none transition-colors duration-300 bg-transparent focus:text-[#B58152] placeholder-black focus:placeholder-[#B58152]"
                     />
                   </div>
                 </div>
@@ -52,7 +52,7 @@ function ContactUs () {
                 <div className="text-center mt-8">
                   <button
                     type="submit"
-                    className="bg-[#e27d6d] hover:bg-[#d46450] text-white px-10 py-3 text-lg rounded-full transition-colors duration-300"
+                    className="bg-[#B58152] hover:bg-[#987252] text-white px-10 py-3 text-lg rounded-full transition-colors duration-300"
                   >
                     Send
                   </button>

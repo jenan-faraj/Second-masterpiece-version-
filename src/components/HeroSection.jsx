@@ -1,11 +1,12 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 function HeroSection() {
   const [activeSlide, setActiveSlide] = useState(0);
 
   const carouselItems = [
     {
-      image: "./src/images/woman-making-beauty-procedures-beauty-salon 1.png",
+      image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRo9QuSWA0LxSz4xDVTsylvmcJ9uqVUqmM10w&s",
       title: "Beauty, Your Way",
       description: "Find & Book Your Perfect Salon!",
     },
@@ -37,9 +38,14 @@ function HeroSection() {
                 alt={item.title}
                 className="w-full h-full object-cover"
               />
-              <div className="absolute bottom-0 left-0 right-0 p-8 text-white bg-[#00000030]">
+              <div className="absolute flex-col flex justify-center items-center bottom-0 left-0 right-0 p-8 text-white bg-[#00000030]">
                 <h5 className="text-2xl font-bold">{item.title}</h5>
                 <p className="text-lg">{item.description}</p>
+                <Link to={"/categories"}>
+                  <button className="bg-[#a0714f] hover:cursor-pointer text-white px-6 py-3 rounded-lg hover:bg-[#956542] transition-colors">
+                    Get started
+                  </button>
+                </Link>
               </div>
             </div>
           ))}

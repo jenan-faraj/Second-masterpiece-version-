@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import CustomerComments from "../components/CustomerComments";
 
@@ -13,15 +14,6 @@ function PartnerProfile() {
     { day: "Sun", date: "16" },
     { day: "Mon", date: "17" },
   ];
-
-  const morningSlots = ["8:00 AM", "9:00 AM", "10:00 AM", "11:00 AM"];
-  const afternoonSlots = [
-    "12:00 - 1:00 PM",
-    "2:00 - 3:00 PM",
-    "4:00 - 5:00 PM",
-    "6:00 - 7:00 PM",
-  ];
-
   const [activeSlide, setActiveSlide] = useState(0);
   const images = [
     "https://i.pinimg.com/474x/27/ab/5f/27ab5fcf5e71573ccb78b097ee9262a9.jpg",
@@ -104,66 +96,173 @@ function PartnerProfile() {
               </div>
             </div>
 
-            
             <h5 className="text-lg font-bold">Monday, February 10</h5>
-              <p className="text-sm">
-                <i className="bi bi-clock"></i> 11:00 AM - 11:30 AM
-                <a href="partnerProfile.html" className="text-primary">Change</a>
-              </p>
-              <h5 className="text-lg font-bold">Enter Details</h5>
-              <form>
-                <div className="mb-3">
-                  <input
-                    type="text"
-                    className="form-control w-full p-2 border rounded"
-                    placeholder="Name"
-                  />
-                </div>
-                <div className="mb-3">
-                  <input
-                    type="text"
-                    className="form-control w-full p-2 border rounded"
-                    placeholder="Phone Number *"
-                  />
-                </div>
-                <div className="mb-3">
-                  <input
-                    type="email"
-                    className="form-control w-full p-2 border rounded"
-                    placeholder="Email"
-                  />
-                </div>
-                <div className="mb-3">
-                  <select className="form-control w-full p-2 border rounded">
-                    <option selected disabled>Service Type</option>
-                    <option value="note1">Gel Nail Polish</option>
-                    <option value="note2">Nail Installation</option>
-                    <option value="note3">Hand Paraffine</option>
-                    <option value="note3">Hair care</option>
-                    <option value="note3">Hair Removal</option>
-                    <option value="note3">Skin Care</option>
-                    <option value="note3">Makeup</option>
-                    <option value="note3">Brows & Lashes</option>
-                  </select>
+            <p className="text-sm">
+              <i className="bi bi-clock"></i> 11:00 AM - 11:30 AM
+              <a href="partnerProfile.html" className="text-primary">
+                Change
+              </a>
+            </p>
+            <h5 className="text-lg font-bold">Enter Details</h5>
+            <form>
+              <div className="mb-3">
+                <input
+                  type="text"
+                  className="form-control w-full p-2 border rounded"
+                  placeholder="Name"
+                />
+              </div>
+              <div className="mb-3">
+                <input
+                  type="text"
+                  className="form-control w-full p-2 border rounded"
+                  placeholder="Phone Number *"
+                />
+              </div>
+              <div className="mb-3">
+                <input
+                  type="email"
+                  className="form-control w-full p-2 border rounded"
+                  placeholder="Email"
+                />
+              </div>
+              <div className="mb-6">
+                <div className="text-xl font-bold mb-4 ">
+                  chose Services  
                 </div>
 
-                <h5 className="m-0 text-lg font-bold">Add Notes:</h5>
-                <div className="mb-3">
-                  <input
-                    type="text"
-                    className="form-control w-full p-2 border rounded"
-                    placeholder="Add note"
-                  />
+                <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+                  <div className="bg-[#F9F3F1] p-3 rounded-lg shadow-sm hover:shadow-md transition-shadow border border-[#B58152]">
+                    <input
+                      type="checkbox"
+                      id="gel-nail-polish"
+                      className="mr-2 h-4 w-4 accent-[#B58152]"
+                    />
+                    <label
+                      htmlFor="gel-nail-polish"
+                      className="font-medium cursor-pointer"
+                    >
+                      Gel Nail Polish
+                    </label>
+                  </div>
+
+                  <div className="bg-[#F9F3F1] p-3 rounded-lg shadow-sm hover:shadow-md transition-shadow border border-[#B58152]">
+                    <input
+                      type="checkbox"
+                      id="nail-installation"
+                      className="mr-2 h-4 w-4 accent-[#B58152]"
+                    />
+                    <label
+                      htmlFor="nail-installation"
+                      className="font-medium cursor-pointer"
+                    >
+                      Nail Installation
+                    </label>
+                  </div>
+
+                  <div className="bg-[#F9F3F1] p-3 rounded-lg shadow-sm hover:shadow-md transition-shadow border border-[#B58152]">
+                    <input
+                      type="checkbox"
+                      id="hand-paraffine"
+                      className="mr-2 h-4 w-4 accent-[#B58152]"
+                    />
+                    <label
+                      htmlFor="hand-paraffine"
+                      className="font-medium cursor-pointer"
+                    >
+                      Hand Paraffine
+                    </label>
+                  </div>
+
+                  <div className="bg-[#F9F3F1] p-3 rounded-lg shadow-sm hover:shadow-md transition-shadow border border-[#B58152]">
+                    <input
+                      type="checkbox"
+                      id="hair-care"
+                      className="mr-2 h-4 w-4 accent-[#B58152]"
+                    />
+                    <label
+                      htmlFor="hair-care"
+                      className="font-medium cursor-pointer"
+                    >
+                      Hair care
+                    </label>
+                  </div>
+
+                  <div className="bg-[#F9F3F1] p-3 rounded-lg shadow-sm hover:shadow-md transition-shadow border border-[#B58152]">
+                    <input
+                      type="checkbox"
+                      id="hair-removal"
+                      className="mr-2 h-4 w-4 accent-[#B58152]"
+                    />
+                    <label
+                      htmlFor="hair-removal"
+                      className="font-medium cursor-pointer"
+                    >
+                      Hair Removal
+                    </label>
+                  </div>
+
+                  <div className="bg-[#F9F3F1] p-3 rounded-lg shadow-sm hover:shadow-md transition-shadow border border-[#B58152]">
+                    <input
+                      type="checkbox"
+                      id="skin-care"
+                      className="mr-2 h-4 w-4 accent-[#B58152]"
+                    />
+                    <label
+                      htmlFor="skin-care"
+                      className="font-medium cursor-pointer"
+                    >
+                      Skin Care
+                    </label>
+                  </div>
+
+                  <div className="bg-[#F9F3F1] p-3 rounded-lg shadow-sm hover:shadow-md transition-shadow border border-[#B58152]">
+                    <input
+                      type="checkbox"
+                      id="makeup"
+                      className="mr-2 h-4 w-4 accent-[#B58152]"
+                    />
+                    <label
+                      htmlFor="makeup"
+                      className="font-medium cursor-pointer"
+                    >
+                      Makeup
+                    </label>
+                  </div>
+
+                  <div className="bg-[#F9F3F1] p-3 rounded-lg shadow-sm hover:shadow-md transition-shadow border border-[#B58152]">
+                    <input
+                      type="checkbox"
+                      id="brows-lashes"
+                      className="mr-2 h-4 w-4 accent-[#B58152]"
+                    />
+                    <label
+                      htmlFor="brows-lashes"
+                      className="font-medium cursor-pointer"
+                    >
+                      Brows & Lashes
+                    </label>
+                  </div>
                 </div>
-                <button className="btn btn-primary mt-3 bg-blue-500 text-white p-2 rounded">
-                  <a
-                    className="text-light text-decoration-none"
-                    href="partnerProfile.html"
-                  >
-                    Confirm Booking
-                  </a>
-                </button>
-              </form>
+              </div>
+
+              <h5 className="m-0 text-lg font-bold">Add Notes:</h5>
+              <div className="mb-3">
+                <input
+                  type="text"
+                  className="form-control w-full p-2 border rounded"
+                  placeholder="Add note"
+                />
+              </div>
+              <button className="btn btn-primary mt-3 bg-[#F9F3F1] hover:bg-[#f0e0db] font-bold text-[#B58152] p-2 rounded">
+                <Link
+                  className="text-light text-decoration-none"
+                  to={"/partnerProfile"}
+                >
+                  Confirm Booking
+                </Link>
+              </button>
+            </form>
           </div>
 
           {/* Right Section: Salon Info */}
@@ -183,7 +282,8 @@ function PartnerProfile() {
                 <span className="font-bold text-2xl">📞</span> 07 8180 3035
               </p>
               <p className="my-2">
-                <span className="font-bold text-2xl">📍</span> Mrjalhmam, Amman, Jordan
+                <span className="font-bold text-2xl">📍</span> Mrjalhmam, Amman,
+                Jordan
               </p>
               <p className="my-2">
                 <span className="font-bold text-2xl">📧</span> Sohail@gmail.com
@@ -304,7 +404,7 @@ function PartnerProfile() {
         </div>
       </div>
 
-      <CustomerComments/>
+      <CustomerComments />
     </>
   );
 }
